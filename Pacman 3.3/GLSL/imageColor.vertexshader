@@ -1,0 +1,21 @@
+#version 330 core
+
+// Input vertex data, different for all executions of this shader.
+layout(location = 0) in vec2 vertexPosition_modelspace;
+layout(location = 2) in vec3 vertexColor;
+
+// Output data ; will be interpolated for each fragment.
+out vec3 newColor;
+
+// Values that stay constant for the whole mesh.
+uniform mat4 M;
+
+void main()
+{
+  // Output position of the vertex, in clip space : MVP * position
+  gl_Position =  M * vec4(vertexPosition_modelspace,0,1);
+
+  // UV of the vertex.
+  newColor = vertexColor;
+}
+

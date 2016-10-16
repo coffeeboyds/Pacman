@@ -1,0 +1,15 @@
+#version 330 core
+
+// Values coming from the vertex shaders
+in vec2 UV;
+
+// Ouput data (the color of the vertex)
+out vec4 color;
+
+// Values that stay constant for the whole mesh.
+uniform sampler2D textureSampler;
+
+void main()
+{
+  color = texture2D( textureSampler, UV );
+}

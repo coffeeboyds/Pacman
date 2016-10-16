@@ -1,0 +1,12 @@
+#version 330 core
+
+// Values coming from the vertex shaders
+in vec3 newColor;
+
+// Ouput data (the color of the vertex)
+out vec4 color;
+
+void main()
+{
+  color = vec4(newColor, 1);
+}

@@ -1,0 +1,76 @@
+#version 330 core
+
+// Interpolated values from the vertex shaders
+in vec3 newColor;
+
+in vec4 Position_cameraspace;
+
+in vec3 Normal_cameraspace;
+in vec3 EyeDirection_cameraspace;
+
+// Ouput data
+layout(location = 0) out vec4 color;
+
+// Values that stay constant for the whole mesh.
+uniform int num_lights;
+uniform vec4 LightsView[256];
+
+void main(){
+
+	// Light emission properties
+	vec3 LightColor = vec3(1,1,1);   // White light
+	float LightPower = 10.0f;       // Increase to make the light brighter
+	
+	vec3 MaterialSpecularColor = vec3(0.3,0.3,0.3);
+
+	// Some ambient light to start off with
+	color.rgb = newColor*vec3(0.1,0.1,0.1);
+	  
+	float distance;
+	
+	vec3 n; // Normal of the computed fragment, in camera space
+	vec3 l; // Direction of the light (from the fragment to the light)
+	vec3 E; // Eye vector (towards the camera)
+	
+	float cosTheta;
+	float cosAlpha;
+	vec3 R; // Direction in which the triangle reflects the light
+	
+	n = normalize( Normal_cameraspace );
+	E = normalize( EyeDirection_cameraspace );
+	
+	for( int i=0; i < num_lights; i++ )
+	{
+	  // Distance to the light
+	  distance = length( LightsView[i] - Position_cameraspace );
+	    //if( distance > 15 )  // PERFORMANCE BOOST!!!
+	      //continue;
+	
+	  // Vector that goes from the vertex to the light, in camera space.
+	  l = normalize( LightsView[i].xyz + EyeDirection_cameraspace );
+
+	
+	  // Cosine of the angle between the normal and the light direction, 
+	  // clamped above 0
+  	  //  - light is at the vertical of the triangle -> 1
+	  //  - light is perpendicular to the triangle -> 0
+	  //  - light is behind the triangle -> 0
+	  cosTheta = clamp( dot( n,l ), 0,1 );
+	
+	  // Direction in which the triangle reflects the light
+	  R = reflect(-l,n);
+	
+	  // Cosine of the angle between the Eye vector and the Reflect vector,
+	  // clamped to 0
+	  //  - Looking into the reflection -> 1
+	  //  - Looking elsewhere -> < 1
+	  cosAlpha = clamp( dot( E,R ), 0,1 );
+	
+      color.rgb +=
+	      // Diffuse : "color" of the object
+		  newColor * LightColor * LightPower / (distance*distance) +
+		  // Specular : reflective highlight, like a mirror
+		  MaterialSpecularColor * LightColor * LightPower / (distance*distance);
+	  
+	}
+}

@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Managers">
+      <UniqueIdentifier>{367f6dd1-b931-4201-98b1-cc5fd661cf66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects">
+      <UniqueIdentifier>{be95285e-c455-483a-94a9-5e8a176e11e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Managers">
+      <UniqueIdentifier>{a40d69b9-3a2e-4d91-acf1-acae9da95822}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects">
+      <UniqueIdentifier>{05ce7a5e-4f12-4875-9041-2fd03acab4b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Scenes">
+      <UniqueIdentifier>{f28d69c0-18c8-435a-aa8d-7c99999175c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scenes">
+      <UniqueIdentifier>{d4f4e5fd-ee71-4d52-b945-ea6463e67781}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\worldObjects">
+      <UniqueIdentifier>{40d1a1e8-71d7-4cb7-9f8b-221a5f5c6497}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\screenObjects">
+      <UniqueIdentifier>{7b97dc39-8856-4abe-bd8f-4fe0ca9a5872}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\worldObjects">
+      <UniqueIdentifier>{e040da39-06b7-4564-94c7-41c8aacb5f9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\screenObjects">
+      <UniqueIdentifier>{c614b1df-3cd7-45f3-a7da-4c0acb9793c4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="scene.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="titleScene.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneObject.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="matrixManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="editorScene.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="circleObject.cpp">
+      <Filter>Source Files\Objects\screenObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="imageObject.cpp">
+      <Filter>Source Files\Objects\screenObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="meshObject.cpp">
+      <Filter>Source Files\Objects\worldObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="screenObject.cpp">
+      <Filter>Source Files\Objects\screenObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="textImageObject.cpp">
+      <Filter>Source Files\Objects\screenObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="worldObject.cpp">
+      <Filter>Source Files\Objects\worldObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="shaderManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="toolbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lineObject.cpp">
+      <Filter>Source Files\Objects\screenObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="cell.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="grid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cubeObject.cpp">
+      <Filter>Source Files\Objects\worldObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="hemisphereObject.cpp">
+      <Filter>Source Files\Objects\worldObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="pacman.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="triangleObject.cpp">
+      <Filter>Source Files\Objects\screenObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="scroll.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneMedium.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="gameScene.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="ghost.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="topCam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sceneManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="scene.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="titleScene.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneObject.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="matrixManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="editorScene.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="meshObject.h">
+      <Filter>Header Files\Objects\worldObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="worldObject.h">
+      <Filter>Header Files\Objects\worldObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="circleObject.h">
+      <Filter>Header Files\Objects\screenObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="imageObject.h">
+      <Filter>Header Files\Objects\screenObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="screenObject.h">
+      <Filter>Header Files\Objects\screenObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="textImageObject.h">
+      <Filter>Header Files\Objects\screenObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="shaderManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="toolbar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lineObject.h">
+      <Filter>Header Files\Objects\screenObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="cell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="grid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cubeObject.h">
+      <Filter>Header Files\Objects\worldObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="hemisphereObject.h">
+      <Filter>Header Files\Objects\worldObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="pacman.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="triangleObject.h">
+      <Filter>Header Files\Objects\screenObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="scroll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneMedium.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="gameScene.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="ghost.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="topCam.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
